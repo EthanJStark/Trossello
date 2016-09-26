@@ -1,5 +1,6 @@
 import express from 'express'
 import apiUsersRouter from './api/users'
+import apiCardsRouter from './api/cards'
 
 const server = express()
 
@@ -14,6 +15,7 @@ server.get('/api/current-user', (request, response) => {
 })
 
 server.use('/api/users', apiUsersRouter)
+server.use('/api/cards', apiCardsRouter)
 
 server.get('/*', (request, response) => {
   response.sendFile(__dirname+'/public/index.html');
