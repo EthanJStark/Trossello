@@ -5,6 +5,7 @@ import Link from './Link'
 import Icon from './Icon'
 import LogoutButton from './LogoutButton'
 import LoginButton from './LoginButton'
+import CreateBoardPanel from './CreateBoardPanel'
 
 const Navbar = (props) => {
   const { auth } = props.state
@@ -36,6 +37,7 @@ const LoggedInNavbar = ({auth}) => {
     <button className="Navbar-button CreateBoardButton">
       <Icon type="plus" />
     </button>
+    <CreateBoardPanel />
     <button className="Navbar-button Navbar-AvatarButton">
       <img src={auth.user.avatar_url} />
       <span>{auth.user.name}</span>
